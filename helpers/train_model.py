@@ -8,7 +8,7 @@ class TrainModels():
         self.X_test = X_test
         self.y_train = y_train
         self.y_test = y_test
-        self.models_scores = {}
+        self.model_scores = {}
 
     def evaluate_models(self,model_name,y_true,y_pred):
         score = f1_score(y_true, y_pred, average='micro')
