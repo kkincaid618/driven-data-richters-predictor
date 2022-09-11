@@ -8,9 +8,11 @@ class TrainModels():
         self.X_test = X_test
         self.y_train = y_train
         self.y_test = y_test
+        self.models_scores = {}
 
-    def evaluate_models(self,model_name, y_true, y_pred):
+    def evaluate_models(self,model_name,y_true,y_pred):
         score = f1_score(y_true, y_pred, average='micro')
+        self.model_scores[model_name] = score
         print(f'F1 Score for {model_name} is {score}')
     
     def train_models(self):
@@ -20,7 +22,6 @@ class TrainModels():
         y_test = self.y_test
 
         models_to_train = self.models_to_train
-
         for model_name in models_to_train:
             model = models_to_train[model_name]
 
@@ -28,3 +29,5 @@ class TrainModels():
             y_pred = model.predict(X_test)
 
             self.evaluate_models(model_name,y_test,y_pred)
+        
+        return self.model_scores
