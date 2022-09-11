@@ -1,0 +1,12 @@
+data/test_values.csv
+data/train_labels.csv
+data/train_values.csv
+predictions/kk-predictions-gs-log-l2-newton-c1-20220826.csv
+predictions/kk-predictions-log-20220823-7143.csv
+predictions/kk-predictions-log-20220823.csv
+predictions/kk-predictions-log-gr-geo-20220823.csv
+predictions/kk-predictions-log-smt-20220823.csv
+predictions/kk-predictions-ovo-log-20220814-6724.csv
+predictions/kk-predictions-ovo-log-20220823.csv
+predictions/kk-predictions-ovo-sgd-20220815-6671.csv
+predictions/kk-predictions-ovr-log-20220823.csv
