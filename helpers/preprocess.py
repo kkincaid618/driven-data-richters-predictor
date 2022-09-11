@@ -212,6 +212,8 @@ class DataProcessor():
                             'rare',X_test[column])
         val_data[column] = where((val_data[column].isin(infrequents)) | ~(val_data[column].isin(all_values)),
                             'rare',val_data[column])
+        
+        print(f'[INFO] Rare values of {column} have been grouped into a category titled "rare"')
 
         return X_train, X_test, val_data
 
